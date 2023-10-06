@@ -1,101 +1,71 @@
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="keywords" content="scuffed+, scuffedplus, scuffed plus, @scuffedplus">
-      <meta name="description" content="github gave me a webhost, i gave it a silly website.">
-      <link rel="shortcut icon" type="x=icon" href="IMG/Icons/fav.png">
-      <title>test</title>
-      <link href="CSS/main.css" rel="stylesheet" type="text/css" media="all">
-   </head>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <body>
-    <nav class="navbar">
-        <ul class="nav-font">
-            <p> checklister  </p>
-        </ul>
-    </nav>
-    
-    </div>  
-<H1> </H1>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="scuffed+, scuffedplus, scuffed plus, @scuffedplus">
+        <meta name="description" content="github gave me a webhost, i gave it a silly website.">
+        <link rel="shortcut icon" type="x=icon" href="IMG/Icons/fav.png">
+        <title>test</title>
+        <link href="CSS/main.css" rel="stylesheet" type="text/css" media="all">
+    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <body>
+        <nav class="navbar">
+            <ul class="nav-font">
+                <p> checklister  </p>
+            </ul>
+        </nav>
 
+        <H1> </H1>
 
-
-    <div class="body">
-        <div class="text-left default-font">
-        <label for="content-toggle-2" class="content-button">To Do List</label>
-        <input class="collapsible-toggle nav-font" type="checkbox" id="content-toggle-2"></input>
-        <div class="collapsible-content sub-text">
-
-            
-            <div class="container">
-                <h2>To-Do List</h2>
-                <input type="text" id="inputText">
-                <hr class="new1">
-                <button onclick="addText()">+</button>
-
-
-              </div>
-            
-              <div class="container" id="outputContainer"></div>
-        </div>
-        </div>
+        <div class="body">
+            <div class="text-left default-font">
+                <label for="content-toggle-2" class="content-button">To Do List</label>
+                <input class="collapsible-toggle nav-font" type="checkbox" id="content-toggle-2"></input>
+                <div class="collapsible-content sub-text">
+                    <div class="container">
+                        <h2>To-Do List</h2>
+                        <input type="text" id="inputText">
+                        <hr class="new1">
+                        <button onclick="addText()">+</button>
+                    </div>
+                    <div class="container" id="outputContainer"></div>
+                </div>
+            </div>
         </div>
 
+        <style>
+            /* Red border */
 
-             
+            hr.new1 {
+                border-top: 1px dotted;
+                width: 49%;
+                text-align: left;
+                position: absolute;
+                display: flex;
+                justify-content: left;
+                margin-bottom: 3%;
+            }
 
+            .container {
+                margin: 20px;
+            }
 
-    <style>
-        /* Red border */
-        hr.new1 {
-          border-top: 1px dotted;
-          width: 50%;
-          text-align: left;
-          position: absolute;
-          display: flex;
-        justify-content: left;
-        margin-bottom: 3%;
+        </style>
 
-        }
+        <script>
+            function addText() {
+                const inputText = document.getElementById('inputText').value;
+                const outputContainer = document.getElementById('outputContainer');
+                const textElement = document.createElement('div');
+                textElement.innerHTML = `${inputText} <button onclick="removeText(this)">x</button> `;
+                outputContainer.appendChild(textElement);
+            }
 
-  .container {
-    margin: 20px;
-  }
-
-    </style>
-
-
-<script>
-    function addText() {
-      const inputText = document.getElementById('inputText').value;
-      const outputContainer = document.getElementById('outputContainer');
-
-      const textElement = document.createElement('div');
-      textElement.innerHTML = `${inputText} <button onclick="removeText(this)">x</button> `;
-
-      outputContainer.appendChild(textElement);
-    }
-
-    function removeText(element) {
-      element.parentElement.remove();
-    }
-  </script>
-</body>
+            function removeText(element) {
+                element.parentElement.remove();
+            }
+        </script>
+    </body>
 </html>
-
-
-        
-    </div>
-
- </body>
-    </div>
-    </div>
-</div>

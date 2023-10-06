@@ -12,6 +12,7 @@
     --main-color: #ee8de6;
     --highlight-color: #5bebf5;
 }
+
 /* fallback colors */
 html{
     font-size: 16px;
@@ -71,15 +72,19 @@ body {
     50%{margin-left: -1rem;}
     100%{}
 }
+
 a {
     color: var(--highlight-color);
   }
+
 a:hover {
     color: var(--main-color);
   }
+
 a:active {
     color: var(--main-color);
   }
+  
 a:visited {
     color: var(--highlight-color);
   }
@@ -249,6 +254,3 @@ form {
     margin-top: 4rem;
 }
 
-hr.new1 {
-    border-top: 1px dotted --highlight-color;
-  }
