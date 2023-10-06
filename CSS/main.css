@@ -149,9 +149,10 @@ footer{
 .sub-title{
     font-size: 2rem;
     color: var(--main-color);
-    margin-bottom: 5rem;
-    margin-left: 6rem;
+    background: var(--background-color);font-family: "Lucida Console", "Courier New", monospace;
 }
+
+
 
 .sub-text{
     font-size: 1.3rem;
@@ -247,3 +248,7 @@ footer{
 form {
     margin-top: 4rem;
 }
+
+hr.new1 {
+    border-top: 1px dotted --highlight-color;
+  }

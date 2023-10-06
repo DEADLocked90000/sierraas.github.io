@@ -1,15 +1,4 @@
 
-// i set up this stuff as a basic placeholder, 
-//lets just use these dropdown menus as items
-//title = task name / whatever
-//details within
-//make an input field
-//maybe on a separate page
-//
-
-
-
-
 
 
 
@@ -30,61 +19,82 @@
    <body>
     <nav class="navbar">
         <ul class="nav-font">
-            <p> List </p>
+            <p> checklister  </p>
         </ul>
     </nav>
+    
+    </div>  
+<H1> </H1>
 
-    <form id="inputForm">
-        <label for="userInput"> </label>
-        <input type="text" id="userInput" required>
-        <button type="submit">Submit</button>
-    </form>
+
 
     <div class="body">
         <div class="text-left default-font">
-        <label for="content-toggle-2" class="content-button">placeholder</label>
+        <label for="content-toggle-2" class="content-button">To Do List</label>
         <input class="collapsible-toggle nav-font" type="checkbox" id="content-toggle-2"></input>
         <div class="collapsible-content sub-text">
-            <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remove Text Example</title>
+
+            
+            <div class="container">
+                <h2>To-Do List</h2>
+                <input type="text" id="inputText">
+                <hr class="new1">
+                <button onclick="addText()">+</button>
+
+
+              </div>
+            
+              <div class="container" id="outputContainer"></div>
+        </div>
+        </div>
+        </div>
+
+
+             
+
+
     <style>
-        .container {
-            display: flex;
-            align-items: center;
-            font-size: 18px;
+        /* Red border */
+        hr.new1 {
+          border-top: 1px dotted;
+          width: 50%;
+          text-align: left;
+          position: absolute;
+          display: flex;
+        justify-content: left;
+        margin-bottom: 3%;
+
         }
 
-        #myButton {
-            margin-left: 10px;
-        }
+  .container {
+    margin: 20px;
+  }
+
     </style>
-</head>
-<body>
-    <div class="container">
-        <div id="displayText">
-            This is some text.
-        </div>
-        <button id="myButton">Remove Text</button>
-    </div>
-    
-    <script>
-        document.getElementById('myButton').addEventListener('click', function() {
-            const displayTextElement = document.getElementById('displayText');
-            if (displayTextElement) {
-                displayTextElement.remove();
-            }
-        });
-    </script>
+
+
+<script>
+    function addText() {
+      const inputText = document.getElementById('inputText').value;
+      const outputContainer = document.getElementById('outputContainer');
+
+      const textElement = document.createElement('div');
+      textElement.innerHTML = `${inputText} <button onclick="removeText(this)">x</button> `;
+
+      outputContainer.appendChild(textElement);
+    }
+
+    function removeText(element) {
+      element.parentElement.remove();
+    }
+  </script>
 </body>
 </html>
 
-            <div id="output"></div>
-    <div id="output"></div>
-    <script src="JS/script.js"></script>
+
+        
+    </div>
+
  </body>
     </div>
     </div>
