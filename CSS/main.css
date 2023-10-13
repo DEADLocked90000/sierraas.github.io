@@ -26,8 +26,30 @@ html{
     font-family: "Lucida Console", "Courier New", monospace;
 }
 
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+  
+.grid > div {
+    height: 11rem;
+}
+
 .default-font{
     font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.flex-container {
+    display: flex;
+    background-color: var(--background-color);
+}
+  
+.flex-container > div {
+    background-color: var(--background-color);
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
 }
 
 body {
@@ -70,6 +92,15 @@ body {
     animation: fbutton .25s 1;}
 @keyframes fbutton {
     50%{margin-left: -1rem;}
+    100%{}
+}
+
+.Calendar-content-button:hover{
+    background-color: var(--highlight-color);
+    cursor: pointer;
+    animation: ffbutton .25s 1;}
+@keyframes ffbutton {
+    50%{margin-top: 35px;}
     100%{}
 }
 
@@ -139,7 +170,7 @@ footer{
     bottom: 0;
     margin: 0;
     background: var(--background-color);
-    background: linear-gradient(180deg, var(--background-color) 60%, var(--main-color) 100%);
+    background: linear-gradient(180deg, var(--background-color) 1%, var(--main-color) 100%);
     width: 100%;
     height: 30rem;
     
@@ -178,6 +209,23 @@ footer{
     border: none;
     font-size: 1.5rem;
     text-align: right;
+}
+
+.Calendar-content-button{
+    all:unset;
+    display: block;
+    padding: 5rem;
+    margin-top: 1.5rem;
+    border-top-right-radius: 5rem;
+    border-top-left-radius: 5rem;
+    width: 50px;
+    border-bottom-right-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    background-color: var(--main-color);
+    color: var(--background-color);
+    border: none;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .content-button:hover{

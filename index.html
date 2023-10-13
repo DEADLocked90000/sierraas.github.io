@@ -9,7 +9,9 @@
         <title>test</title>
         <link href="CSS/main.css" rel="stylesheet" type="text/css" media="all">
     </head>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <body>
         <nav class="navbar">
             <ul class="nav-font">
@@ -25,7 +27,6 @@
                 <input class="collapsible-toggle nav-font" type="checkbox" id="content-toggle-2"></input>
                 <div class="collapsible-content sub-text">
                     <div class="container">
-                        <h2>To-Do List</h2>
                         <input type="text" id="inputText">
                         <hr class="new1">
                         <button onclick="addText()">+</button>
@@ -33,12 +34,138 @@
                     <div class="container" id="outputContainer"></div>
                 </div>
             </div>
+
+            <div class="text-left default-font">
+                <label for="content-toggle-3" class="content-button">Calendar</label>
+                <input class="collapsible-toggle nav-font" type="checkbox" id="content-toggle-3"></input>
+
+                <div class="collapsible-content sub-text">
+                
+                    <div class="grid">
+
+                        <div class="default-font">
+                            <label for="content-toggle-4" class="Calendar-content-button">01</label>
+                            <input class="collapsible-toggle nav-font" type="checkbox" id="content-toggle-4"></input>
+                            <div class="collapsible-content sub-text">
+                                <div class="container">
+                                    <h2>To-do List</h2>
+                                    <input type="text" id="inputText">
+                                    <hr class="new2"> 
+                                    <button onclick="addText()">+</button>
+                                </div>
+                                <div class="container" id="outputContainer"></div>
+                            </div>
+                        </div>
+
+                        <div class="default-font">
+                            <label for="content-toggle-4" class="Calendar-content-button">02</label>
+                            <input class="collapsible-toggle nav-font" type="checkbox" id="content-toggle-4"></input>
+                            <div class="collapsible-content sub-text">
+                                <div class="container">
+                                    <h2>To-do List</h2>
+                                    <input type="text" id="inputText">
+                                    <hr class="new3">
+                                    <button onclick="addText()">+</button>
+                                </div>
+                                <div class="container" id="outputContainer"></div>
+                            </div>
+                        </div>
+
+                        <div class="default-font">
+                            <label for="content-toggle-4" class="Calendar-content-button">03</label>
+                            <input class="collapsible-toggle nav-font" type="checkbox" id="content-toggle-4"></input>
+                            <div class="collapsible-content sub-text">
+                                <div class="container">
+                                    <h2>To-do List</h2>
+                                    <input type="text" id="inputText">
+                                    <hr class="new4">
+                                    <button onclick="addText()">+</button>
+                                </div>
+                                <div class="container" id="outputContainer"></div>
+                            </div>
+                        </div>
+
+                        <div class="default-font">
+                            <label for="content-toggle-4" class="Calendar-content-button">03</label>
+                            <input class="collapsible-toggle nav-font" type="checkbox" id="content-toggle-4"></input>
+                            <div class="collapsible-content sub-text">
+                                <div class="container">
+                                    <h2>To-do List</h2>
+                                    <input type="text" id="inputText">
+                                    <hr class="new5">
+                                    <button onclick="addText()">+</button>
+                                </div>
+                                <div class="container" id="outputContainer"></div>
+                            </div>
+                        </div>
+
+                        <div class="default-font">
+                            <label for="content-toggle-4" class="Calendar-content-button">03</label>
+                            <input class="collapsible-toggle nav-font" type="checkbox" id="content-toggle-4"></input>
+                            <div class="collapsible-content sub-text">
+                                <div class="container">
+                                    <h2>To-do List</h2>
+                                    <input type="text" id="inputText">
+                                    <hr class="new6">
+                                    <button onclick="addText()">+</button>
+                                </div>
+                                <div class="container" id="outputContainer"></div>
+                            </div>
+                        </div>
+
+                        <div class="default-font">
+                            <label for="content-toggle-4" class="Calendar-content-button">03</label>
+                            <input class="collapsible-toggle nav-font" type="checkbox" id="content-toggle-4"></input>
+                            <div class="collapsible-content sub-text">
+                                <div class="container">
+                                    <h2>To-do List</h2>
+                                    <input type="text" id="inputText">
+                                    <hr class="new2">
+                                    <button onclick="addText()">+</button>
+                                </div>
+                                <div class="container" id="outputContainer"></div>
+                            </div>
+                        </div>
+
+                        <div class="default-font">
+                            <label for="content-toggle-4" class="Calendar-content-button">03</label>
+                            <input class="collapsible-toggle nav-font" type="checkbox" id="content-toggle-4"></input>
+                            <div class="collapsible-content sub-text">
+                                <div class="container">
+                                    <h2>To-do List</h2>
+                                    <input type="text" id="inputText">
+                                    <hr class="new2">
+                                    <button onclick="addText()">+</button>
+                                </div>
+                                <div class="container" id="outputContainer"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="container" id="outputContainer"></div>
+                </div>
+            </div>
         </div>
+        
+        <footer>
+            
+        </footer>
 
         <style>
             /* Red border */
 
             hr.new1 {
+                border-top: 1px dotted;
+                width: 49%;
+                text-align: left;
+                position: absolute;
+                display: flex;
+                justify-content: left;
+                margin-bottom: 3%;
+            }
+
+            hr.new2 {
                 border-top: 1px dotted;
                 width: 49%;
                 text-align: left;
@@ -61,6 +188,7 @@
                 const textElement = document.createElement('div');
                 textElement.innerHTML = `${inputText} <button onclick="removeText(this)">x</button> `;
                 outputContainer.appendChild(textElement);
+                document.getElementById("inputText").reset();
             }
 
             function removeText(element) {

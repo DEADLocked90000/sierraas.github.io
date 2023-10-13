@@ -11,7 +11,7 @@ if(themeint == null){
 var colors = {
     0:{
         "main-color": "#ee8de6",
-        "highlight-color": "#5bebf5"
+        "highlight-color": "#AA4400"
     }
 }
 
